@@ -188,7 +188,7 @@ class Game {
 
         // next we calculate words per minute
         // Calculation = words / minutes = wpm
-        console.log(this.correctCount / ((this.totalTime - this.timeLeft) / 60));
+        // console.log(this.correctCount / ((this.totalTime - this.timeLeft) / 60));
         this.selectors.wpm.innerText = (this.correctCount / ((this.totalTime - this.timeLeft) / 60)).toFixed(1);
     }
     checkCurrentWords(e) {
