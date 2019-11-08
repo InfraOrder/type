@@ -27,8 +27,7 @@ inputField.addEventListener('keydown', e => {
             // check if the row is complete
             // animate row change
             return 0;
-        }
-        else if (e.key >= 'a' && e.key <= 'z' || (e.key === `'` || e.key === ',' || e.key === '.' || e.key === ';')) {
+        } else if (e.key >= 'a' && e.key <= 'z' || (e.key === `'` || e.key === ',' || e.key === '.' || e.key === ';')) {
             window.game.checkCurrentWords(e);
         }
     }
@@ -36,7 +35,7 @@ inputField.addEventListener('keydown', e => {
 });
 
 var words = new XMLHttpRequest();
-words.open('GET', '/words.txt');
+words.open('GET', 'words.txt');
 words.onload = function () {
     startGame(words, 60);
 }
