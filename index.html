@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8"/>
+    <title>Type</title>
+    <link href="styles.css" rel="stylesheet"/>
+  </head>
+  <body>
+    <div id="main-container">
+      <div class="header" id="header">
+        <span id="time-container"><span id="time-span">time: <span id="time">100.0</span></span></span><span id="wpm-container"><span id="wpm-span">wpm: <span id="wpm">100.0</span></span></span>
+      </div>
+      <div id="paragraph-container">
+        <!-- these three keep the structure of the document --
+          -- they will not hold any content -->
+        <div class="section" id="prev-template"></div>
+        <div class="section" id="center-template"><span class="zero"></span><span class="one"></span><span class="two"></span><span class="three"></span><span class="four"></span><span class="five"></span><span class="six"></span><span class="seven"></span><span class="eight"></span><span class="nine"></span></div>
+        <div class="section" id="next-template"></div>
+        <div class="section-floating" id="fading-words" style="opacity: 0"></div>
+        <div class="section-floating" id="prev-words">
+          <span class="success">type to start. no pressure</span>
+        </div>
+        <div class="section-floating" id="center-words"><span id="absolute-current" class="abs-zero"></span><span class="zero"></span><span class="one"></span><span class="two"></span><span class="three"></span><span class="four"></span><span class="five"></span><span class="six"></span><span class="seven"></span><span class="eight"></span><span class="nine"></span>
+        </div>
+        <div class="section-floating" id="next-words"><span class="zero"></span><span class="one"></span><span class="two"></span><span class="three"></span><span class="four"></span><span class="five"></span><span class="six"></span><span class="seven"></span><span class="eight"></span><span class="nine"></span></div>
+      </div>
+      <div id="input-container">
+        <div id="input-inner">
+          <input id="input-field" name="input-field" type="text" spellcheck="false" autocomplete="off" autocorrect="off" autocapitalize="off" tabindex="1" placeholder="redo redo redo" /><button id="redo-button" tabindex="2" onclick="redo()">redo</button>
+        </div>
+      </div>
+      <div id="completed">
+        <div class="completed-content">
+          <h1 class="finish"><u>FINISH!</u></h1>
+          <h3>WPM: <span id="wpm-finish">100.0</span></h3>
+          <button id="replay-button" onclick="redo()">Play Again</button>
+        </div>
+        
+      </div>
+    </div>
+    <script src="node_modules/animejs/lib/anime.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
